@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>SVHN Model as a Flask API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>NOISE CANCELLING</h1>
+<div class="agile-its">
+    <h2>Flask with DL Web Service</h2>
+    <div class="w3layouts">
+        <div class="photos-upload-view">
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <input type="file" id="upload" />
+            <audio id="audio" controls>
+                <source src="" id="src" />
+            </audio>
+
+            <script>
+            function handleFiles(event) {
+                var files = event.target.files;
+                $("#src").attr("src", URL.createObjectURL(files[0]));
+                document.getElementById("audio").load();
+            }
+            
+            document.getElementById("upload").addEventListener("change", handleFiles, false);
+            </script> 
+            
+            
+            <!-- ###음성 파일 업로드 test1 -->
+            <!-- <audio class="player" controls ref="player">
+                <source src="" ref="source">
+            </audio> -->
+
+            <!-- <input type="file" id="soundFileInput" class="soundFileInput"
+                accept="audio/*"
+                @change = "OnAudioSelected" /> -->
+
+
+
+            <!-- ###파일 업로드 test -->
+            <!-- <form action="http://localhost:8000/fileupload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" />
+             
+            </form> -->
+
+            <!-- ###파일 업로드 원본 -->
+            <!-- <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
+                <div class="upload-btn-wrapper">
+                    <button class="btn">음성 업로드</button>
+                    <input type="file" value="Upload" name="image">
+                </div> -->
+
+                <!-- <input type="submit" value="예측 결과">
+                {% if label %}
+                    <span class="result_lable">
+                        {{ label }}
+                    </span>
+                {% endif %} -->
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
